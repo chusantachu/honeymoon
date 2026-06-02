@@ -45,10 +45,51 @@
   .tabs-wrap { position: sticky; top: 0; z-index: 100; background: var(--cream); border-bottom: 1px solid var(--rule); }
   .tabs { display: flex; max-width: 860px; margin: 0 auto; overflow-x: auto; scrollbar-width: none; }
   .tabs::-webkit-scrollbar { display: none; }
-  .tab { flex: 1; min-width: 120px; padding: 16px 12px 14px; text-align: center; cursor: pointer; border: none; background: none; border-bottom: 2px solid transparent; transition: all 0.2s; font-family: 'Noto Sans KR', sans-serif; }
-  .tab-emoji { font-size: 16px; display: block; margin-bottom: 4px; }
-  .tab-name { display: block; font-size: 12px; font-weight: 500; color: var(--ink-light); letter-spacing: 0.08em; }
-  .tab-dates { display: block; font-size: 10px; color: var(--ink-faint); margin-top: 4px; line-height: 1.3; }
+  .tab {
+    flex: 1;
+    min-width: 96px;
+    min-height: 64px;
+    padding: 12px 6px 10px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    white-space: normal;
+    line-height: 1.15;
+  }
+  .tab-emoji {
+    font-size: 15px;
+    display: block;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+  .tab-name {
+    display: block;
+    width: 100%;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ink-light);
+    letter-spacing: 0.06em;
+    line-height: 1.15;
+    white-space: nowrap;
+  }
+  .tab-dates {
+    display: block;
+    width: 100%;
+    font-size: 9px;
+    color: var(--ink-faint);
+    margin-top: 1px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
   .tab[data-city="paris"].active { border-bottom-color: var(--paris); }
   .tab[data-city="paris"].active .tab-name { color: var(--paris); }
   .tab[data-city="interlaken"].active { border-bottom-color: var(--interlaken); }
@@ -293,6 +334,37 @@
   .hotel-name { font-size: 13px; font-weight: 500; color: var(--ink); line-height: 1.35; }
   .hotel-name-ko { font-size: 11px; color: var(--ink-faint); margin-top: 1px; }
   .hotel-arrow { font-size: 14px; color: var(--ink-faint); flex-shrink: 0; }
+
+  @media (max-width: 480px) {
+    .tabs {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    .tab {
+      flex: 0 0 25%;
+      min-width: 82px;
+      min-height: 66px;
+      padding: 10px 3px 9px;
+      gap: 3px;
+    }
+    .tab-emoji {
+      font-size: 14px;
+      margin-bottom: 1px;
+    }
+    .tab-name {
+      font-size: 10px;
+      letter-spacing: 0.04em;
+    }
+    .tab-dates {
+      font-size: 8.5px;
+      letter-spacing: 0;
+    }
+    .tab[data-city="interlaken"] .tab-name,
+    .tab[data-city="firenze"] .tab-name {
+      font-size: 9.5px;
+    }
+  }
+
 </style>
 </head>
 <body>
