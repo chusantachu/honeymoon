@@ -2336,6 +2336,13 @@ function initAllProgress() {
 // ── Boot
 (async () => {
   await loadFromStorage();
+  // 항상 편집 모드 꺼진 상태로 시작
+  editMode = false;
+  document.body.classList.remove('edit-mode');
+  document.getElementById('editBar').classList.remove('visible');
+  const btn = document.getElementById('editToggle');
+  btn.textContent = '✏️ 편집';
+  btn.classList.remove('on');
   initAllProgress();
 })();
 </script>
