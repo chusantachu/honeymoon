@@ -314,6 +314,60 @@
   .cl-add-btn:hover { background: var(--cream); color: var(--ink-light); }
   .edit-mode .cl-add-btn { display: block; }
 
+  /* RULES POPUP */
+  .rules-backdrop {
+    display: none; position: fixed; inset: 0;
+    background: rgba(28,28,26,0.6); z-index: 9999;
+    align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .rules-backdrop.open { display: flex; }
+  .rules-modal {
+    background: var(--cream); border-radius: 16px;
+    padding: 28px 24px; width: min(420px, 92vw);
+    border: 1px solid var(--rule);
+    max-height: 85vh; overflow-y: auto;
+    position: relative;
+  }
+  .rules-close {
+    position: absolute; top: 14px; right: 16px;
+    border: none; background: none; cursor: pointer;
+    font-size: 18px; color: var(--ink-faint);
+    line-height: 1; padding: 4px;
+  }
+  .rules-close:hover { color: var(--ink); }
+  .rules-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-weight: 400;
+    text-align: center; margin-bottom: 4px;
+  }
+  .rules-sub {
+    text-align: center; font-size: 11px;
+    color: var(--ink-faint); letter-spacing: 0.05em;
+    margin-bottom: 20px;
+  }
+  .rules-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .rules-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13px; color: var(--ink); line-height: 1.5;
+    padding: 8px 10px; background: white;
+    border-radius: 8px; border: 1px solid var(--rule);
+  }
+  .rules-num {
+    font-family: 'Playfair Display', serif;
+    font-style: italic; font-size: 13px;
+    color: var(--ink-faint); min-width: 20px;
+  }
+  .rules-btn {
+    width: 100%; margin-top: 20px;
+    background: var(--ink); color: white;
+    border: none; border-radius: 8px;
+    padding: 13px; font-size: 14px;
+    cursor: pointer; font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500; letter-spacing: 0.03em;
+  }
+  .rules-btn:hover { background: #333; }
+
   /* HOTEL CARD */
   .hotel-card {
     display: flex; align-items: center; gap: 14px;
@@ -368,6 +422,33 @@
 </style>
 </head>
 <body>
+
+<!-- 해외여행 금지 십오계명 팝업 -->
+<div class="rules-backdrop open" id="rulesPopup">
+  <div class="rules-modal">
+    <button class="rules-close" onclick="document.getElementById('rulesPopup').classList.remove('open')">✕</button>
+    <div class="rules-title">✈️ 해외여행 금지 십오계명</div>
+    <div class="rules-sub">신혼여행 출발 전 필독 · by Hyunji</div>
+    <ul class="rules-list">
+      <li><span class="rules-num">1</span>아직 멀었냐 금지</li>
+      <li><span class="rules-num">2</span>줄 계속 서야되냐 금지</li>
+      <li><span class="rules-num">3</span>음식이 달다 금지</li>
+      <li><span class="rules-num">4</span>음식이 짜다 금지</li>
+      <li><span class="rules-num">5</span>겨우 이거 보러왔냐 금지</li>
+      <li><span class="rules-num">6</span>버스에서 답답하다 금지</li>
+      <li><span class="rules-num">7</span>조식 이게 다냐 금지</li>
+      <li><span class="rules-num">8</span>인상쓰고 갑분싸 금지</li>
+      <li><span class="rules-num">9</span>쇼핑하러가서 눈치주기 금지</li>
+      <li><span class="rules-num">10</span>돈아깝다 금지</li>
+      <li><span class="rules-num">11</span>이돈이면 집에서 해먹는게 낫다 금지</li>
+      <li><span class="rules-num">12</span>이거 무슨 맛으로 먹냐 금지</li>
+      <li><span class="rules-num">13</span>이거 한국돈으로 얼마냐 금지</li>
+      <li><span class="rules-num">14</span>물이 제일 맛있다 금지</li>
+      <li><span class="rules-num">15</span>덥다고 사람 많다고 한숨쉬기 금지</li>
+    </ul>
+    <button class="rules-btn" onclick="document.getElementById('rulesPopup').classList.remove('open')">✅ 숙지했습니다</button>
+  </div>
+</div>
 
 <button class="edit-toggle" id="editToggle" onclick="toggleEditMode()">✏️ 편집</button>
 
