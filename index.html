@@ -2216,24 +2216,44 @@ function closeAllModals() {
   document.querySelectorAll('.modal-backdrop').forEach(m => m.classList.remove('open'));
 }
 
-// ── localStorage 비활성화 — 항상 HTML 원본 표시
-function saveToStorage() {
-  try {
-    localStorage.setItem('honeymoon_content', document.getElementById('mainContent').innerHTML);
-  } catch(e) {
-    console.error('save failed', e);
-  }
+// ── Firebase 저장/불러오기
+let db = null;
+let DOC_REF = null;
+
+async function initFirebase() {
+  const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js");
+  const { getFirestore, doc, getDoc, setDoc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
+  const firebaseConfig = {
+    apiKey: "AIzaSyDaIP0UI1Skjd6Zi6rw05OhlxbT8omeTu4",
+    authDomain: "honeymoon-2026-a731b.firebaseapp.com",
+    projectId: "honeymoon-2026-a731b",
+    storageBucket: "honeymoon-2026-a731b.firebasestorage.app",
+    messagingSenderId: "879979497440",
+    appId: "1:879979497440:web:681b457450f2fafea3cd85"
+  };
+  const fbApp = initializeApp(firebaseConfig);
+  db = getFirestore(fbApp);
+  DOC_REF = doc(db, "honeymoon", "content");
 }
 
-function loadFromStorage() {
+async function saveToStorage() {
   try {
-    const saved = localStorage.getItem('honeymoon_content');
-    if (saved) {
-      document.getElementById('mainContent').innerHTML = saved;
+    if (!DOC_REF) return;
+    const { setDoc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
+    const html = document.getElementById('mainContent').innerHTML;
+    await setDoc(DOC_REF, { html, updatedAt: new Date().toISOString() });
+  } catch(e) { console.error('저장 실패:', e); }
+}
+
+async function loadFromStorage() {
+  try {
+    await initFirebase();
+    const { getDoc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
+    const snap = await getDoc(DOC_REF);
+    if (snap.exists() && snap.data().html) {
+      document.getElementById('mainContent').innerHTML = snap.data().html;
     }
-  } catch(e) {
-    console.error('load failed', e);
-  }
+  } catch(e) { console.error('불러오기 실패:', e); }
 }
 
 // ── util
@@ -2314,8 +2334,10 @@ function initAllProgress() {
 }
 
 // ── Boot
-loadFromStorage();
-initAllProgress();
+(async () => {
+  await loadFromStorage();
+  initAllProgress();
+})();
 </script>
 </body>
 </html>
