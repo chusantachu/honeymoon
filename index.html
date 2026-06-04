@@ -417,7 +417,7 @@
     <button class="tab" data-city="roma" onclick="switchCity('roma')">
       <span class="tab-emoji">🇮🇹</span>
       <span class="tab-name">ROMA</span>
-      <span class="tab-dates">일정 추가 예정</span>
+      <span class="tab-dates">6/15 – 6/19</span>
     </button>
   </div>
 </div>
@@ -463,12 +463,20 @@
         <span class="day-number">6/5 금</span>
       </div>
       <div class="items">
+        <div class="item" data-id="par-1-0">
+          <div class="item-time">07:00</div>
+          <div class="item-marker"><div class="item-dot" style="background:#888780"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">인천공항 출발 (아시아나 OZ501) <button class="edit-btn" onclick="openEdit('par-1-0')">✏️</button></div>
+            <div class="item-desc">인천 ICN 10:05 출발 · 파리 CDG 17:20 도착 · 2명</div>
+          </div>
+        </div>
         <div class="item" data-id="par-1-1">
-          <div class="item-time">17:30</div>
+          <div class="item-time">17:20</div>
           <div class="item-marker"><div class="item-dot" style="background:var(--paris)"></div><div class="item-line"></div></div>
           <div class="item-body">
-            <div class="item-name">파리 공항 도착 <button class="edit-btn" onclick="openEdit('par-1-1')">✏️</button></div>
-            <div class="item-desc">입국 수속 · 숙소 이동 · 짐 정리</div>
+            <div class="item-name">파리 샤를드골 공항 도착 (CDG) <button class="edit-btn" onclick="openEdit('par-1-1')">✏️</button></div>
+            <div class="item-desc">입국 수속 · RER B 또는 택시로 숙소 이동</div>
           </div>
         </div>
         <div class="item" data-id="par-1-2">
@@ -496,7 +504,7 @@
         </div>
         <div class="checklist-body hidden" id="cl-par-1">
           <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">여권</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button><button class="cl-add-btn" onclick="addClItem(this)">+ 항목 추가</button></div></div>
-          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">항공권 e-티켓</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">OZ501 항공권 확인 (ICN 10:05 출발 · CDG 17:20 도착)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
           <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">숙소 예약 확인서</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
           <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">유로 현금</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
           <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">해외 결제 카드</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
@@ -948,9 +956,97 @@
     <div class="day-block" data-day="interlaken-2">
       <div class="day-label">
         <span class="day-number">Day 02</span>
-        <span class="day-title">VIP 패스 1일차 — 유럽의 지붕 + 알프스 마을</span>
+        <span class="day-title">VIP 패스 1일차 — 피르스트 + 그린델발트 + 슈피츠</span>
         <div class="day-rule"></div>
         <span class="day-number">6/10 수</span>
+      </div>
+      <div class="items">
+        <div class="item" data-id="itk-3-1">
+          <div class="item-time">08:30</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--interlaken)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">그린델발트 → 피르스트 곤돌라 <span class="tag" style="background:var(--accent-interlaken);color:var(--interlaken)">VIP 무료</span> <button class="edit-btn" onclick="openEdit('itk-3-1')">✏️</button></div>
+            <div class="item-desc">탑승 약 25분 · 정상 2,168m</div>
+          </div>
+        </div>
+        <div class="item" data-id="itk-3-2">
+          <div class="item-time">09:30</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--interlaken)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">퍼스트 클리프워크 <button class="edit-btn" onclick="openEdit('itk-3-2')">✏️</button></div>
+            <div class="item-desc">절벽 철제 트레일 · 약 30분</div>
+          </div>
+        </div>
+        <div class="item" data-id="itk-3-3">
+          <div class="item-time">10:30</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--interlaken)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">바흐알프제 트레킹 <span class="tag" style="background:var(--accent-interlaken);color:var(--interlaken)">먼저</span> <button class="edit-btn" onclick="openEdit('itk-3-3')">✏️</button></div>
+            <div class="item-desc">왕복 약 1시간 30분 · 산상 호수 반영샷</div>
+          </div>
+        </div>
+        <div class="item" data-id="itk-3-4">
+          <div class="item-time">12:30</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--interlaken)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">마운틴 카트로 하산 <span class="tag" style="background:#f3f3f0;color:#999">점심식사</span> <span class="tag" style="background:var(--accent-interlaken);color:var(--interlaken)">VIP 30% 할인</span> <button class="edit-btn" onclick="openEdit('itk-3-4')">✏️</button></div>
+            <div class="item-desc">피르스트 → 보르트 · 스릴 만점 하강</div>
+          </div>
+        </div>
+        <div class="item" data-id="itk-3-5">
+          <div class="item-time">14:00</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--interlaken)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">그린델발트 마을 + 기념품 <button class="edit-btn" onclick="openEdit('itk-3-5')">✏️</button></div>
+            <div class="item-desc">아이거 북벽 뷰 · 카페 디저트 · 쇼핑</div>
+          </div>
+        </div>
+        <div class="item" data-id="itk-3-6">
+          <div class="item-time">16:00</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--interlaken)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">슈피츠 (Spiez) + 툰 호수 유람선 <span class="tag" style="background:var(--accent-interlaken);color:var(--interlaken)">VIP 무료</span> <button class="edit-btn" onclick="openEdit('itk-3-6')">✏️</button></div>
+            <div class="item-desc">인터라켄 서역 선착장 → 슈피츠 유람선 약 1시간 · 슈피츠 성 · 포도밭 · 복귀 시 60번 버스 (약 20분) · 왕복 모두 VIP 무료</div>
+          </div>
+        </div>
+        <div class="item" data-id="itk-3-7">
+          <div class="item-time">18:00</div>
+          <div class="item-marker"><div class="item-dot" style="background:#bbb"></div></div>
+          <div class="item-body">
+            <div class="item-name">인터라켄 복귀 · 저녁 식사 <span class="tag" style="background:var(--accent-interlaken);color:var(--interlaken)">VIP 무료</span> <button class="edit-btn" onclick="openEdit('itk-3-7')">✏️</button></div>
+            <div class="item-desc">슈피츠 60번 버스 귀환 후 저녁 식사</div>
+          </div>
+        </div>
+      </div>
+      <div class="note" data-note-id="note-itk-3">
+        <button class="note-edit-btn" onclick="openNoteEdit('note-itk-3')">✏️</button>
+        카트 타는 도중 먹을 점심 도시락 챙기기
+      </div>
+      <button class="add-note-btn" onclick="addNote('interlaken-3')">+ 메모 추가</button>
+      <div class="checklist-wrap">
+        <div class="checklist-header" onclick="toggleChecklist('cl-itk-3')">
+          <div class="checklist-header-left">🎒 6/10 Day 2 체크리스트 <span class="checklist-progress" id="cl-itk-3-prog"></span></div>
+          <span class="checklist-toggle" id="cl-itk-3-arr">▾</span>
+        </div>
+        <div class="checklist-body hidden" id="cl-itk-3">
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">VIP 패스 소지 확인</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button><button class="cl-add-btn" onclick="addClItem(this)">+ 항목 추가</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">도시락 챙기기 (마운틴 카트 중 점심)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">운동화 · 트레킹화</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">방풍 겉옷</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">물 · 간식</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">카메라 충전</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">슈피츠 선착장 유람선 시간 확인</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-block" data-day="interlaken-3">
+      <div class="day-label">
+        <span class="day-number">Day 03</span>
+        <span class="day-title">VIP 패스 2일차 — 유럽의 지붕 + 알프스 마을</span>
+        <div class="day-rule"></div>
+        <span class="day-number">6/11 목</span>
       </div>
       <div class="items">
         <div class="item" data-id="itk-2-1">
@@ -1012,7 +1108,7 @@
       <button class="add-note-btn" onclick="addNote('interlaken-2')">+ 메모 추가</button>
       <div class="checklist-wrap">
         <div class="checklist-header" onclick="toggleChecklist('cl-itk-2')">
-          <div class="checklist-header-left">🎒 6/10 Day 2 체크리스트 <span class="checklist-progress" id="cl-itk-2-prog"></span></div>
+          <div class="checklist-header-left">🎒 6/11 Day 3 체크리스트 <span class="checklist-progress" id="cl-itk-2-prog"></span></div>
           <span class="checklist-toggle" id="cl-itk-2-arr">▾</span>
         </div>
         <div class="checklist-body hidden" id="cl-itk-2">
@@ -1024,94 +1120,6 @@
           <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">고산증 약 or 초콜릿</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
           <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">컵라면 바우처 사용</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
           <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">카메라 · 보조배터리</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 3 -->
-    <div class="day-block" data-day="interlaken-3">
-      <div class="day-label">
-        <span class="day-number">Day 03</span>
-        <span class="day-title">VIP 패스 2일차 — 피르스트 + 그린델발트 + 슈피츠</span>
-        <div class="day-rule"></div>
-        <span class="day-number">6/11 목</span>
-      </div>
-      <div class="items">
-        <div class="item" data-id="itk-3-1">
-          <div class="item-time">08:30</div>
-          <div class="item-marker"><div class="item-dot" style="background:var(--interlaken)"></div><div class="item-line"></div></div>
-          <div class="item-body">
-            <div class="item-name">그린델발트 → 피르스트 곤돌라 <span class="tag" style="background:var(--accent-interlaken);color:var(--interlaken)">VIP 무료</span> <button class="edit-btn" onclick="openEdit('itk-3-1')">✏️</button></div>
-            <div class="item-desc">탑승 약 25분 · 정상 2,168m</div>
-          </div>
-        </div>
-        <div class="item" data-id="itk-3-2">
-          <div class="item-time">09:30</div>
-          <div class="item-marker"><div class="item-dot" style="background:var(--interlaken)"></div><div class="item-line"></div></div>
-          <div class="item-body">
-            <div class="item-name">퍼스트 클리프워크 <button class="edit-btn" onclick="openEdit('itk-3-2')">✏️</button></div>
-            <div class="item-desc">절벽 철제 트레일 · 약 30분</div>
-          </div>
-        </div>
-        <div class="item" data-id="itk-3-3">
-          <div class="item-time">10:30</div>
-          <div class="item-marker"><div class="item-dot" style="background:var(--interlaken)"></div><div class="item-line"></div></div>
-          <div class="item-body">
-            <div class="item-name">바흐알프제 트레킹 <span class="tag" style="background:var(--accent-interlaken);color:var(--interlaken)">먼저</span> <button class="edit-btn" onclick="openEdit('itk-3-3')">✏️</button></div>
-            <div class="item-desc">왕복 약 1시간 30분 · 산상 호수 반영샷</div>
-          </div>
-        </div>
-        <div class="item" data-id="itk-3-4">
-          <div class="item-time">12:30</div>
-          <div class="item-marker"><div class="item-dot" style="background:var(--interlaken)"></div><div class="item-line"></div></div>
-          <div class="item-body">
-            <div class="item-name">마운틴 카트로 하산 <span class="tag" style="background:#f3f3f0;color:#999">점심식사</span> <span class="tag" style="background:var(--accent-interlaken);color:var(--interlaken)">VIP 30% 할인</span> <button class="edit-btn" onclick="openEdit('itk-3-4')">✏️</button></div>
-            <div class="item-desc">피르스트 → 보르트 · 스릴 만점 하강</div>
-          </div>
-        </div>
-        <div class="item" data-id="itk-3-5">
-          <div class="item-time">14:00</div>
-          <div class="item-marker"><div class="item-dot" style="background:var(--interlaken)"></div><div class="item-line"></div></div>
-          <div class="item-body">
-            <div class="item-name">그린델발트 마을 + 기념품 <button class="edit-btn" onclick="openEdit('itk-3-5')">✏️</button></div>
-            <div class="item-desc">아이거 북벽 뷰 · 카페 디저트 · 쇼핑</div>
-          </div>
-        </div>
-        <div class="item" data-id="itk-3-6">
-          <div class="item-time">16:00</div>
-          <div class="item-marker"><div class="item-dot" style="background:var(--interlaken)"></div><div class="item-line"></div></div>
-          <div class="item-body">
-            <div class="item-name">슈피츠 (Spiez) + 툰 호수 유람선 <span class="tag" style="background:var(--accent-interlaken);color:var(--interlaken)">VIP 무료</span> <button class="edit-btn" onclick="openEdit('itk-3-6')">✏️</button></div>
-            <div class="item-desc">인터라켄 서역 선착장 → 슈피츠 유람선 약 1시간 · 슈피츠 성 · 포도밭 · 복귀 시 60번 버스 (약 20분) · 왕복 모두 VIP 무료</div>
-          </div>
-        </div>
-        <div class="item" data-id="itk-3-7">
-          <div class="item-time">18:00</div>
-          <div class="item-marker"><div class="item-dot" style="background:#bbb"></div></div>
-          <div class="item-body">
-            <div class="item-name">인터라켄 복귀 <span class="tag" style="background:var(--accent-interlaken);color:var(--interlaken)">VIP 무료</span> <button class="edit-btn" onclick="openEdit('itk-3-7')">✏️</button></div>
-            <div class="item-desc">마지막 저녁</div>
-          </div>
-        </div>
-      </div>
-      <div class="note" data-note-id="note-itk-3">
-        <button class="note-edit-btn" onclick="openNoteEdit('note-itk-3')">✏️</button>
-        카트 타는 도중 먹을 점심 도시락 챙기기
-      </div>
-      <button class="add-note-btn" onclick="addNote('interlaken-3')">+ 메모 추가</button>
-      <div class="checklist-wrap">
-        <div class="checklist-header" onclick="toggleChecklist('cl-itk-3')">
-          <div class="checklist-header-left">🎒 6/11 Day 3 체크리스트 <span class="checklist-progress" id="cl-itk-3-prog"></span></div>
-          <span class="checklist-toggle" id="cl-itk-3-arr">▾</span>
-        </div>
-        <div class="checklist-body hidden" id="cl-itk-3">
-          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">VIP 패스 소지 확인</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button><button class="cl-add-btn" onclick="addClItem(this)">+ 항목 추가</button></div></div>
-          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">도시락 챙기기 (마운틴 카트 중 점심)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
-          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">운동화 · 트레킹화</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
-          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">방풍 겉옷</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
-          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">물 · 간식</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
-          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">카메라 충전</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
-          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">슈피츠 선착장 유람선 시간 확인</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
         </div>
       </div>
     </div>
@@ -1474,6 +1482,450 @@
     </div>
   </div>
 
+  <!-- ROMA -->
+  <div class="city-section" id="section-roma" data-city="roma">
+    <div class="city-header">
+      <div class="city-flag">🇮🇹</div>
+      <div class="city-name" style="color:var(--roma)">Roma</div>
+      <div class="city-name-ko">로마</div>
+      <div class="city-meta">
+        <div class="city-meta-item">
+          <div class="city-meta-dot" style="background:var(--roma)"></div>
+          2026. 6. 15 (월) — 6. 19 (금)
+        </div>
+        <div class="city-meta-item">
+          <div class="city-meta-dot" style="background:var(--rule)"></div>
+          4박 5일
+        </div>
+      </div>
+    </div>
+
+    <!-- 숙소 카드 -->
+    <a class="hotel-card" href="https://maps.google.com/?q=Via+Marghera+49+00185+Roma" target="_blank">
+      <div class="hotel-icon" style="background:var(--accent-roma)">🏨</div>
+      <div class="hotel-info">
+        <div class="hotel-label">숙소 · 전 일정</div>
+        <div class="hotel-name">FoffoSuite (포포 스위트)</div>
+        <div class="hotel-name-ko">Via Marghera, 49, 00185 Roma · 테르미니역 도보 5분 · 구글맵에서 보기</div>
+      </div>
+      <div class="hotel-arrow">↗</div>
+    </a>
+
+    <!-- Day 1 -->
+    <div class="day-block" data-day="roma-1">
+      <div class="day-label">
+        <span class="day-number">Day 01</span>
+        <span class="day-title">피렌체 출발 — 로마 도착</span>
+        <div class="day-rule"></div>
+        <span class="day-number">6/15 월</span>
+      </div>
+      <div class="items">
+        <div class="item" data-id="rom-1-1">
+          <div class="item-time">저녁</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">FoffoSuite 체크인 <button class="edit-btn" onclick="openEdit('rom-1-1')">✏️</button></div>
+            <div class="item-desc">Via Marghera 49 · 테르미니역 도보 5분 · 투어 버스 종료 후 이동</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-1-2">
+          <div class="item-time">야간</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div></div>
+          <div class="item-body">
+            <div class="item-name">트라스테베레 야경 산책 <button class="edit-btn" onclick="openEdit('rom-1-2')">✏️</button></div>
+            <div class="item-desc">로마에서 가장 낭만적인 골목 · 저녁 식사 · 첫날 가볍게</div>
+          </div>
+        </div>
+      </div>
+      <button class="add-note-btn" onclick="addNote('roma-1')">+ 메모 추가</button>
+      <div class="checklist-wrap">
+        <div class="checklist-header" onclick="toggleChecklist('cl-rom-1')">
+          <div class="checklist-header-left">🎒 6/15 Day 1 체크리스트 <span class="checklist-progress" id="cl-rom-1-prog"></span></div>
+          <span class="checklist-toggle" id="cl-rom-1-arr">▾</span>
+        </div>
+        <div class="checklist-body hidden" id="cl-rom-1">
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">FoffoSuite 체크인 확인</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">이탈리아 유로 현금 확인</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">짐 정리 · 휴식</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <button class="cl-add-btn" onclick="addClItem(this)">+ 항목 추가</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-block" data-day="roma-2">
+      <div class="day-label">
+        <span class="day-number">Day 02</span>
+        <span class="day-title">콜로세움 · 로마 역사지구</span>
+        <div class="day-rule"></div>
+        <span class="day-number">6/16 화</span>
+      </div>
+      <div class="items">
+        <div class="item" data-id="rom-2-1">
+          <div class="item-time">08:30</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">Barnum Café — 로마 핫플 브런치 카페 <button class="edit-btn" onclick="openEdit('rom-2-1')">✏️</button></div>
+            <div class="item-desc">Campo de' Fiori 바로 뒤 · 현지인+여행자 모두 찾는 트렌디 카페 · 에그 브렉퍼스트 · 큐 짧은 아침 시간 추천</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-2-1b">
+          <div class="item-time">09:30</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">몬티 지구 (Rione Monti) 골목 산책 <span class="tag" style="background:var(--accent-roma);color:#7a3030">힙</span> <button class="edit-btn" onclick="openEdit('rom-2-1b')">✏️</button></div>
+            <div class="item-desc">로마에서 가장 트렌디한 동네 · 빈티지샵 · 독립 카페 · 벽화 · 현지인 분위기</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-2-1c">
+          <div class="item-time">10:00</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">기사단 열쇠구멍 뷰포인트 <span class="tag" style="background:var(--accent-roma);color:#7a3030">인생샷</span> <button class="edit-btn" onclick="openEdit('rom-2-1c')">✏️</button></div>
+            <div class="item-desc">아벤티노 언덕 · 열쇠구멍 너머로 성 베드로 대성당 완벽 정렬 · 아침 일찍 줄 없음 · SNS 핫스팟</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-2-1d">
+          <div class="item-time">10:20</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">오렌지 정원 (Giardino degli Aranci) <span class="tag" style="background:var(--accent-roma);color:#7a3030">뷰포인트</span> <button class="edit-btn" onclick="openEdit('rom-2-1d')">✏️</button></div>
+            <div class="item-desc">바로 옆 위치 · 로마 전경 파노라마 무료 · 오렌지나무 정원 · 인스타 명소</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-2-2">
+          <div class="item-time">10:50</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">콜로세움 다락 입장 <span class="tag" style="background:var(--accent-roma);color:#7a3030">예약완료</span> <button class="edit-btn" onclick="openEdit('rom-2-2')">✏️</button></div>
+            <div class="item-desc">콜로세움 다락(아레나 플로어) · 입장 10분 전 도착 필수 · 예약 확인서 지참</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-2-3">
+          <div class="item-time">13:00</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">포로 로마노 · 팔라티노 언덕 <button class="edit-btn" onclick="openEdit('rom-2-3')">✏️</button></div>
+            <div class="item-desc">콜로세움 입장권으로 통합 입장 가능 · 고대 로마 유적지</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-2-4">
+          <div class="item-time">15:00</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">진실의 입 (Bocca della Verità) <button class="edit-btn" onclick="openEdit('rom-2-4')">✏️</button></div>
+            <div class="item-desc">산타 마리아 인 코스메딘 성당 · 로마의 휴일 촬영지</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-2-5">
+          <div class="item-time">16:30</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">Campo de' Fiori 광장 산책 · 아페리티보 <button class="edit-btn" onclick="openEdit('rom-2-5')">✏️</button></div>
+            <div class="item-desc">로마 로컬 광장 · 저녁 전 아페리티보(이탈리아식 해피아워) 문화 체험 · 와인 한 잔</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-2-6">
+          <div class="item-time">19:00</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div></div>
+          <div class="item-body">
+            <div class="item-name">트라스테베레 저녁 식사 <button class="edit-btn" onclick="openEdit('rom-2-6')">✏️</button></div>
+            <div class="item-desc">정통 로마 파스타 · 카초에페페 or 카르보나라</div>
+          </div>
+        </div>
+      </div>
+      <button class="add-note-btn" onclick="addNote('roma-2')">+ 메모 추가</button>
+      <div class="checklist-wrap">
+        <div class="checklist-header" onclick="toggleChecklist('cl-rom-2')">
+          <div class="checklist-header-left">🎒 6/16 Day 2 체크리스트 <span class="checklist-progress" id="cl-rom-2-prog"></span></div>
+          <span class="checklist-toggle" id="cl-rom-2-arr">▾</span>
+        </div>
+        <div class="checklist-body hidden" id="cl-rom-2">
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">콜로세움 다락 예약 확인서 지참</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">10:40 콜로세움 앞 도착 (10분 전)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">편안한 워킹화 · 썬크림</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">카메라 충전 (기사단 열쇠구멍 · 오렌지 정원)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">물 · 간식</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <button class="cl-add-btn" onclick="addClItem(this)">+ 항목 추가</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-block" data-day="roma-3">
+      <div class="day-label">
+        <span class="day-number">Day 03</span>
+        <span class="day-title">트레비 · 스페인 광장 · 판테온 · 나보나</span>
+        <div class="day-rule"></div>
+        <span class="day-number">6/17 수</span>
+      </div>
+      <div class="items">
+        <div class="item" data-id="rom-3-0">
+          <div class="item-time">09:00</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">Roscioli Caffè — 로마 로컬 최애 카페 <span class="tag" style="background:var(--accent-roma);color:#7a3030">힙</span> <button class="edit-btn" onclick="openEdit('rom-3-0')">✏️</button></div>
+            <div class="item-desc">Via de Giubbonari · 현지인이 줄 서는 카페 · 코르네토 + 카푸치노 · 나보나 광장 근처</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-3-1">
+          <div class="item-time">09:30</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">트레비 분수 (Fontana di Trevi) <span class="tag" style="background:var(--accent-roma);color:#7a3030">아침 방문</span> <button class="edit-btn" onclick="openEdit('rom-3-1')">✏️</button></div>
+            <div class="item-desc">아침 일찍이 사람 적고 사진 찍기 최적 · 동전 던지기 · 주변 젤라또</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-3-2">
+          <div class="item-time">10:30</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">스페인 광장 · 계단 (Piazza di Spagna) <button class="edit-btn" onclick="openEdit('rom-3-2')">✏️</button></div>
+            <div class="item-desc">135개 계단 · 명품 거리 콘도티 쇼핑 · 바르카차 분수</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-3-3">
+          <div class="item-time">12:30</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">점심 — Osteria della Trippa <button class="edit-btn" onclick="openEdit('rom-3-3')">✏️</button></div>
+            <div class="item-desc">현지인 추천 정통 로마 트라토리아 · 카초에페페 · 카르보나라</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-3-4">
+          <div class="item-time">14:00</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">판테온 (Pantheon) <button class="edit-btn" onclick="openEdit('rom-3-4')">✏️</button></div>
+            <div class="item-desc">2천년 역사 신전 · 완벽한 돔 · 내부 무료 입장 가능 (단 예약 권장)</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-3-5">
+          <div class="item-time">15:30</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">나보나 광장 (Piazza Navona) <button class="edit-btn" onclick="openEdit('rom-3-5')">✏️</button></div>
+            <div class="item-desc">베르니니 4강의 분수 · 카페 테라스 · 버스킹 · 광장 분위기 만끽</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-3-6">
+          <div class="item-time">17:00</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">카스텔 산탄젤로 (Castel Sant'Angelo) <span class="tag" style="background:var(--accent-roma);color:#7a3030">뷰포인트</span> <button class="edit-btn" onclick="openEdit('rom-3-6')">✏️</button></div>
+            <div class="item-desc">천사의 성 · 테라스에서 테베레강 + 로마 전경 · 석양 뷰 최고</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-3-7">
+          <div class="item-time">19:30</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div></div>
+          <div class="item-body">
+            <div class="item-name">프라티 지구 저녁 + 젤라또 <button class="edit-btn" onclick="openEdit('rom-3-7')">✏️</button></div>
+            <div class="item-desc">카스텔 산탄젤로 바로 옆 · 로컬 맛집 골목 · Gelateria dei Gracchi 명품 젤라또</div>
+          </div>
+        </div>
+      </div>
+      <button class="add-note-btn" onclick="addNote('roma-3')">+ 메모 추가</button>
+      <div class="checklist-wrap">
+        <div class="checklist-header" onclick="toggleChecklist('cl-rom-3')">
+          <div class="checklist-header-left">🎒 6/17 Day 3 체크리스트 <span class="checklist-progress" id="cl-rom-3-prog"></span></div>
+          <span class="checklist-toggle" id="cl-rom-3-arr">▾</span>
+        </div>
+        <div class="checklist-body hidden" id="cl-rom-3">
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">트레비 분수 — 아침 일찍 방문 (09:30)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">동전 준비 (트레비 분수)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">편안한 워킹화 · 물</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">카메라 충전</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <button class="cl-add-btn" onclick="addClItem(this)">+ 항목 추가</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day-block" data-day="roma-4">
+      <div class="day-label">
+        <span class="day-number">Day 04</span>
+        <span class="day-title">남부 투어 — 소렌토 · 포지타노 · 아말피 · 살레르노</span>
+        <div class="day-rule"></div>
+        <span class="day-number">6/18 목</span>
+      </div>
+      <div class="items">
+        <div class="item" data-id="rom-4-1">
+          <div class="item-time">06:40</div>
+          <div class="item-marker"><div class="item-dot" style="background:#888780"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">로마 테르미니역 집합 <span class="tag" style="background:var(--accent-roma);color:#7a3030">미팅</span> <button class="edit-btn" onclick="openEdit('rom-4-1')">✏️</button></div>
+            <div class="item-desc">테르미니역 내부 24번 플랫폼 옆 LUSH 매장 앞 · 가이드님과 미팅 (20분 소요)</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-4-2">
+          <div class="item-time">07:00</div>
+          <div class="item-marker"><div class="item-dot" style="background:#888780"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">로마 → 나폴리 → 소렌토 (Frecciarossa 9501) <button class="edit-btn" onclick="openEdit('rom-4-2')">✏️</button></div>
+            <div class="item-desc">Roma Termini 07:00 출발 · Napoli Centrale 08:12 도착 · 7호칸 19A·19B · 소렌토까지 약 2시간</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-4-3">
+          <div class="item-time">오전</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">소렌토 투어 + 점심 + 자유시간 (약 100분) <button class="edit-btn" onclick="openEdit('rom-4-3')">✏️</button></div>
+            <div class="item-desc">목요일 코스 — 폼페이 없이 소렌토에서 더 여유롭게 · 현지 식당 자유 점심 · 레몬 마을 산책</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-4-4">
+          <div class="item-time">오후</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">포지타노 자유시간 (약 180분) <button class="edit-btn" onclick="openEdit('rom-4-4')">✏️</button></div>
+            <div class="item-desc">유네스코 세계문화유산 · 포지타노 미니버스 이동 (10유로) · 해변 · 절벽 마을 산책</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-4-5">
+          <div class="item-time">오후</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">아말피 마을 투어 <button class="edit-btn" onclick="openEdit('rom-4-5')">✏️</button></div>
+            <div class="item-desc">목요일 코스 특전 — 아말피 마을 직접 투어 (화/목/토 코스)</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-4-6">
+          <div class="item-time">저녁</div>
+          <div class="item-marker"><div class="item-dot" style="background:#888780"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">살레르노행 페리 탑승 (약 60분) <button class="edit-btn" onclick="openEdit('rom-4-6')">✏️</button></div>
+            <div class="item-desc">바다에서 아말피 코스트 전경 감상 · 페리 22유로</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-4-8">
+          <div class="item-time">19:49</div>
+          <div class="item-marker"><div class="item-dot" style="background:#888780"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">살레르노 → 로마 테르미니 (Frecciarossa 8332) <button class="edit-btn" onclick="openEdit('rom-4-8')">✏️</button></div>
+            <div class="item-desc">Salerno 19:49 출발 · Roma Termini 21:20 도착 · 6호칸 19C·19D</div>
+          </div>
+        </div>
+      </div>
+      <div class="note" data-note-id="note-rom-4">
+        <button class="note-edit-btn" onclick="openNoteEdit('note-rom-4')">✏️</button>
+        📍 집합 장소: 테르미니역 24번 플랫폼 옆 <strong>LUSH 매장 앞</strong><br>
+        🚄 갈 때: Frecciarossa 9501 · 7호칸 19A·19B<br>
+        🚄 올 때: Frecciarossa 8332 · 6호칸 19C·19D<br><br>
+        💶 <strong>현금 준비 (목요일 코스 · 1인 기준)</strong><br>
+        · 포지타노 미니버스 10유로<br>
+        · 살레르노행 페리 22유로<br>
+        · 수신기 3유로<br>
+        · 합계 <strong>35유로 × 2명 = 70유로</strong><br>
+        · 소렌토 점심 · 포지타노 자유시간 식비 별도
+      </div>
+      <button class="add-note-btn" onclick="addNote('roma-4')">+ 메모 추가</button>
+      <div class="checklist-wrap">
+        <div class="checklist-header" onclick="toggleChecklist('cl-rom-4')">
+          <div class="checklist-header-left">🎒 6/18 Day 4 체크리스트 <span class="checklist-progress" id="cl-rom-4-prog"></span></div>
+          <span class="checklist-toggle" id="cl-rom-4-arr">▾</span>
+        </div>
+        <div class="checklist-body hidden" id="cl-rom-4">
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">Frecciarossa 9501 기차표 확인 (7호칸 19A·19B)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">06:40 LUSH 매장 앞 집합</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">현금 준비 — 미니버스 10유로 + 페리 22유로 + 수신기 3유로 (1인 35유로 · 2명 70유로)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">소렌토 점심 · 포지타노 자유시간 식비 별도 현금</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">수영복 · 비치 샌들 (포지타노 해변)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">썬크림 · 선글라스 필수</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">멀미약 준비 (페리·해안도로)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">카메라 · 보조배터리 풀충전</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <button class="cl-add-btn" onclick="addClItem(this)">+ 항목 추가</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="day-block" data-day="roma-5">
+      <div class="day-label">
+        <span class="day-number">Day 05</span>
+        <span class="day-title">로마 마지막 날 · 귀국</span>
+        <div class="day-rule"></div>
+        <span class="day-number">6/19 금</span>
+      </div>
+      <div class="items">
+        <div class="item" data-id="rom-5-1">
+          <div class="item-time">오전</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">보르게세 미술관 or 빌라 보르게세 공원 <button class="edit-btn" onclick="openEdit('rom-5-1')">✏️</button></div>
+            <div class="item-desc">베르니니 조각 걸작 · 사전예약 필수 · 또는 공원 산책으로 여유롭게</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-5-2">
+          <div class="item-time">점심</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">로마 마지막 식사 <button class="edit-btn" onclick="openEdit('rom-5-2')">✏️</button></div>
+            <div class="item-desc">로마 전통 파스타 · 티라미수 · 마지막 젤라또</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-5-3">
+          <div class="item-time">17:40</div>
+          <div class="item-marker"><div class="item-dot" style="background:#888780"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">숙소 체크아웃 · 테르미니역 이동 <button class="edit-btn" onclick="openEdit('rom-5-3')">✏️</button></div>
+            <div class="item-desc">도보 5분 · 17:50 레오나르도 익스프레스 탑승 · FCO 18:22 도착 목표</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-5-4">
+          <div class="item-time">18:22</div>
+          <div class="item-marker"><div class="item-dot" style="background:#888780"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">피우미치노 공항 (FCO) 도착 <button class="edit-btn" onclick="openEdit('rom-5-4')">✏️</button></div>
+            <div class="item-desc">로마/레오나르도다빈치 국제공항 · 3터미널 · 출발 3시간 전 도착</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-5-5">
+          <div class="item-time">18:25</div>
+          <div class="item-marker"><div class="item-dot" style="background:#888780"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">아시아나 OZ562 체크인 오픈 · 발권 <button class="edit-btn" onclick="openEdit('rom-5-5')">✏️</button></div>
+            <div class="item-desc">로마 FCO 21:25 출발 · 인천 ICN 15:40 도착 (익일) · 2명</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-5-6">
+          <div class="item-time">19:00</div>
+          <div class="item-marker"><div class="item-dot" style="background:var(--roma)"></div><div class="item-line"></div></div>
+          <div class="item-body">
+            <div class="item-name">플라자 라운지 샤워시설 예약 <span class="tag" style="background:var(--accent-roma);color:#7a3030">19:00 예약</span> <button class="edit-btn" onclick="openEdit('rom-5-6')">✏️</button></div>
+            <div class="item-desc">FCO 3터미널 플라자 라운지 · 19:00 / 20:00 각 1명</div>
+          </div>
+        </div>
+        <div class="item" data-id="rom-5-7">
+          <div class="item-time">21:25</div>
+          <div class="item-marker"><div class="item-dot" style="background:#888780"></div></div>
+          <div class="item-body">
+            <div class="item-name">로마 출발 → 인천 (아시아나 OZ562) <button class="edit-btn" onclick="openEdit('rom-5-7')">✏️</button></div>
+            <div class="item-desc">FCO 21:25 출발 · ICN 15:40 도착 (6/20) · 신혼여행 끝 🎉</div>
+          </div>
+        </div>
+      </div>
+      <button class="add-note-btn" onclick="addNote('roma-5')">+ 메모 추가</button>
+      <div class="checklist-wrap">
+        <div class="checklist-header" onclick="toggleChecklist('cl-rom-5')">
+          <div class="checklist-header-left">🎒 6/19 Day 5 체크리스트 <span class="checklist-progress" id="cl-rom-5-prog"></span></div>
+          <span class="checklist-toggle" id="cl-rom-5-arr">▾</span>
+        </div>
+        <div class="checklist-body hidden" id="cl-rom-5">
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">짐 전날 밤 미리 싸기</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">OZ562 항공권 확인 (FCO 21:25 출발)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">17:30 전 FCO 3터미널 도착</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">18:25 체크인 오픈 · 발권</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">플라자 라운지 샤워 예약 확인 (19:00 · 20:00)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">면세 환급 서류 정리 (Tax Refund)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">17:50 레오나르도 익스프레스 탑승 (테르미니 → FCO)</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <div class="checklist-item"><input type="checkbox" onclick="handleCheckClick(event, this)"><label onclick="handleLabelClick(event, this)">여권 · 항공권 최종 확인</label><div class="cl-edit-btns"><button class="cl-btn" onclick="editClItem(this)" title="수정">✏️</button><button class="cl-btn" onclick="deleteClItem(this)" title="삭제">🗑</button></div></div>
+          <button class="cl-add-btn" onclick="addClItem(this)">+ 항목 추가</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <div class="footer">2026 Honeymoon · Paris · Interlaken · Firenze · Roma</div>
 
 <!-- EDIT BAR -->
@@ -1518,6 +1970,16 @@
       <option value="interlaken-1">인터라켄 Day 1</option>
       <option value="interlaken-2">인터라켄 Day 2</option>
       <option value="interlaken-3">인터라켄 Day 3</option>
+      <option value="interlaken-4">인터라켄 Day 4</option>
+      <option value="firenze-1">피렌체 Day 1</option>
+      <option value="firenze-2">피렌체 Day 2</option>
+      <option value="firenze-3">피렌체 Day 3</option>
+      <option value="firenze-4">피렌체 Day 4</option>
+      <option value="roma-1">로마 Day 1</option>
+      <option value="roma-2">로마 Day 2</option>
+      <option value="roma-3">로마 Day 3</option>
+      <option value="roma-4">로마 Day 4</option>
+      <option value="roma-5">로마 Day 5</option>
     </select>
     <label>시간</label>
     <input id="a-time" type="text" placeholder="09:00">
